@@ -75,7 +75,7 @@ describe "Pets Controller" do
     end
 
     it " loads form to edit a pet and his owner" do
-      binding.pry
+      # binding.pry
       visit "/pets/#{@pet.id}/edit"
       expect(page).to have_field('pet_name')
       expect(page.has_checked_field?(@owner.name)).to eq(true)
